@@ -47,7 +47,14 @@
     img {
   margin: 10px; /* Adjust the margin size as needed */
   border: 1px solid black; /* Add a black border around the image */
+
 }
+
+.experience-details {
+            flex: 2;
+            text-align: justify; /* Justify text */
+        }
+
 
 
   </style>
@@ -66,7 +73,7 @@
         <a aria-label="My Github Profile" target="_blank" href="https://github.com/rohansharma4050">
           <i class="icon fa fa-github-alt" aria-hidden="true"></i>
         </a>
-        <a aria-label="My Resume" target="_blank" href="">
+        <a aria-label="My Resume" target="_blank" href="https://drive.google.com/drive/u/1/folders/159gWQ66wR2rOPc2fAiNVYuM1p8sMPPng">
           <i class="icon fa fa fa-file-pdf-o" aria-hidden="true"></i>
         </a>
         <a aria-label="Send Email" href="mailto:rsharma11@stevens.edu" target="_blank">
@@ -75,8 +82,9 @@
       </div>
       <div class="header-links">
         <a class="link" href="#about" data-scroll>About Me</a>
-        <a class="link" href="#about" data-scroll>Education</a>
-        <a class="link" href="#about" data-scroll>Skills</a>
+        <a class="link" href="#redirectworkexperience" data-scroll>Work Experience</a>
+        <a class="link" href="#redirecteducation" data-scroll>Education</a>
+        <a class="link" href="#skills" data-scroll>Skills</a>
         <a class="link" href="#projects" data-scroll>Projects</a>
         <a class="link" href="#certificates" data-scroll>Certificates</a>
       </div>
@@ -101,12 +109,62 @@
       </p>
     </div>
 
+
+
+    <div id="redirectworkexperience">
+      <h1 class="section-title">Work Experience</h1>
+      <div id="work-experience">
+          <div class="experience-item">
+              <div class="experience-details">
+                  <h3>Senior Executive - Data Scientist</h3>
+                  <p><strong>Motilal Oswal Financial Services Ltd </strong>, Mumbai, Maharashtra, India · Full-time </p>
+                  <p><strong>Tenure: </strong> August 2022 - June 2023 · 11 mos </p>
+                  <ul></ul>
+                  <p>• Played a pivotal role in driving the company's revenue growth through the successful implementation of data-driven strategies for cross-selling multiple financial products, including Mutual Funds (MF), Alternative Investment Funds (AIF), Insurance, and Portfolio Management Services (PMS). During my tenure, the company achieved a remarkable milestone, generating over $100 million in revenue from these products, attributable to my data-driven contributions.</p>
+                  <ul></ul>
+                  <p><strong>Key Roles and Responsibilities</strong></p>
+                  <ul>
+                      <li>Data Integration - Collaborated with cross-functional teams to streamline data collection and integration processes, ensuring the availability of clean and reliable data for analysis. This facilitated the development of more accurate predictive models.</li>
+                      <li>Analytics - Leveraged statistical analysis, machine learning, and predictive modeling to develop robust cross-selling strategies tailored to the diverse product portfolio. Utilized tools such as Python, data visualization libraries, and AWS.</li>
+                      <li>Customer Segmentation - Employed advanced segmentation techniques to categorize customers based on their financial behavior, risk profiles, and preferences. This enabled the company to target specific customer segments with personalized product recommendations, resulting in increased conversion rates.</li>
+                  </ul>
+              </div>
+              <div class="experience-logo">
+                  <img src="./assets/img/jpg/mo.jpg" alt="Motilal Oswal Financial Services Ltd">
+              </div>
+          </div>
+          <div class="experience-item">
+              <div class="experience-details">
+                  <h3>Technical Intern</h3>
+                  <p><strong>Kotak Securities, Mumbai, Maharashtra, India</strong> · Internship</p>
+                  <p><strong>Tenure: </strong> June 2021 - July 2021 · 2 mos</p>
+                  <ul></ul>
+                  <p>• Developed a Stock Price Prediction Module using Algorithmic Trading.</p>
+                  <p>• Used yfinance library for fetching the live price of the Stock directly from Yahoo Finance and used LSTM special kind of Recurrent Neural Networks for Modelling.</p>
+                  <p>• Deployed the same on Streamlit in the form of Web App.</p>
+              </div>
+              <div class="experience-logo">
+                  <img src="./assets/img/jpg/kotak.jpg" alt="Kotak Securities">
+              </div>
+          </div>
+      </div>
+  </div>
+
+
     
+
+    <div id="redirecteducation">
+
       <h1 class="section-title">Education</h1> <!-- Section title for Education -->
+      
     <div id="education">  
+    
       <div class="education-item">
+        
           <div class="education-details">
               <h3>Stevens Institute of Technology</h3>
+              <p><strong>Hoboken, New Jersey, USA</strong></p>
+              <p><strong>September 2023 – May 2024</strong></p>
               <p><strong>Master of Science (M.Sc.) in Data Science</strong></p>
               <p><strong>Provost Scholarship:</strong> Merit based scholarship of 10,000 USD.</p>
               <p><strong>CGPA:</strong> 3.83/4.0</p>
@@ -121,10 +179,7 @@
               <span class="course-tag">Marketing Analytics</span>
               <span class="course-tag">Supply Chain Logistics</span>
           </div>
-          <div class="education-location">
-              <p>Hoboken, New Jersey, USA</p>
-              <p>September 2023 – May 2024</p>
-          </div>
+
           <div class="education-logo">
               <img src="./assets/img/jpg/stevenslogo.png" alt="Stevens Institute of Technology">
           </div>
@@ -132,6 +187,8 @@
       <div class="education-item">
           <div class="education-details">
               <h3>Amity University Mumbai</h3>
+              <p><strong>Mumbai, Maharashtra, India</strong></p>
+              <p><strong>August 2018 – May 2022</strong></p>
               <p><strong>Bachelor of Technology (B.Tech.) in Computer Science Engineering, Minors in Busines Management</strong></p>
               <p><strong>CGPA:</strong> 3.84/4.0</p>
               <p><strong>Relevant Coursework:</strong></p>
@@ -142,18 +199,18 @@
               <span class="course-tag">Financial Management</span>
               <span class="course-tag">Entrepreneurship Development</span>
           </div>
-          <div class="education-location">
-              <p>Mumbai, Maharashtra, India</p>
-              <p>August 2018 – May 2022</p>
-          </div>
+
           <div class="education-logo">
               <img src="./assets/img/jpg/aum.jpg" alt="aum">
           </div>
       </div>
   </div>
+
+    </div>
+
+    
   
-
-
+  <div id="skills">
     <div class="user">
       <!-- Skills -->
       <div class="tech">
@@ -165,6 +222,9 @@
         </div>
       </div>
     </div>
+  </div>
+
+    
   </section>
 
   <!-- Projects Section -->

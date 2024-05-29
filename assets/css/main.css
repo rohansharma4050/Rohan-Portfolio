@@ -791,7 +791,7 @@ a img {
   }
   
 
-  #education {
+  #education,#work-experience {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -799,7 +799,7 @@ a img {
     background-color: #f7f9fa; /* Light background color */
 }
 
-.education-item {
+.education-item,.experience-item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -810,27 +810,27 @@ a img {
     background-color: #fff;
 }
 
-.education-details {
+.education-details, .experience-details {
     flex: 2;
 }
 
-.education-location, .education-logo {
+.education-location, .experience-logo {
     flex: 1;
     text-align: center;
 }
 
-.education-location p, .education-details p {
+.education-location p, .experience-details p {
     margin: 5px 0;
 }
 
-.education-logo img {
-    max-width: 100px;
+.education-logo img, .experience-logo img {
+    max-width: 175px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-.course-tag {
+.course-tag,.role-tag {
     display: inline-block;
     background-color: #e0e7ff; /* Tag background color */
     color: #2b32b2; /* Tag text color */
