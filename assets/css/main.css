@@ -842,4 +842,20 @@ a img {
     font-size: 14px;
 }
 
+#dashboard-links-container .project-link {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  #dashboard-links-container .project-link:hover {
+    background-color: #0056b3;
+  }
+  
+  
 
