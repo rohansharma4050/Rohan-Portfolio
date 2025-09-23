@@ -344,6 +344,15 @@ template {
     content: "\f0e0"
 }
 
+/* Profile picture: square, responsive, cropped to fill, no rounded corners */
+.profile-pic {
+    width: 20%;            /* keep same visual size as original inline width */
+    aspect-ratio: 1 / 1;   /* force square */
+    object-fit: cover;     /* crop image to fill square without distortion */
+    border-radius: 0;      /* remove rounding to make square */
+    display: inline-block;
+}
+
 
 
 
@@ -858,4 +867,3 @@ a img {
   }
   
   
-
