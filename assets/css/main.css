@@ -851,6 +851,47 @@ a img {
     font-size: 14px;
 }
 
+/* Print styles: improve page breaks and hide non-essential UI */
+@media print {
+    /* Hide interactive or decorative elements */
+    #particles-js, .header, .header-icons, .header-links, .down, .project-link, .icon {
+        display: none !important;
+    }
+
+    /* Make body use full width for print */
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    /* Avoid breaking inside these card-like containers */
+    .user-details, .experience-item, .education-item, .certificate-item, .user-projects {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+        margin-bottom: 16px;
+    }
+
+    /* Ensure images scale down and don't force large breaks */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid;
+    }
+
+    /* Force a page break before large sections if needed */
+    #certificates, #projects, #redirecteducation, #redirectworkexperience {
+        page-break-before: always;
+        break-before: always;
+    }
+
+    /* Use normal link styling but show URLs for accessibility if desired */
+    a:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+    }
+}
+
 #dashboard-links-container .project-link {
     padding: 12px 24px;
     background-color: #007bff;
