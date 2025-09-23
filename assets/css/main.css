@@ -850,45 +850,79 @@ a img {
     margin: 5px 5px 5px 0;
     font-size: 14px;
 }
-
-/* Print styles: improve page breaks and hide non-essential UI */
+/* Print styles: place each major block on its own page and simplify layout */
 @media print {
-    /* Hide interactive or decorative elements */
-    #particles-js, .header, .header-icons, .header-links, .down, .project-link, .icon {
+    /* Hide decorative/interactable bits but keep the main header text */
+    .header-icons, .header-links, .down, .project-link, .icon {
         display: none !important;
     }
 
-    /* Make body use full width for print */
-    body {
-        background: #fff !important;
-        color: #000 !important;
+    /* Keep header (name & title) visible and force it to occupy its own printed page */
+    .header {
+        page-break-after: always;
+        break-after: page;
     }
 
-    /* Avoid breaking inside these card-like containers */
-    .user-details, .experience-item, .education-item, .certificate-item, .user-projects {
+    /* My Story (user-details) on its own page */
+    .user-details {
+        page-break-after: always;
+        break-after: page;
+    }
+
+    /* Each work experience should start on a new page and not be split */
+    .experience-item {
+        page-break-after: always;
+        break-after: page;
         break-inside: avoid;
         page-break-inside: avoid;
         -webkit-column-break-inside: avoid;
-        margin-bottom: 16px;
     }
 
-    /* Ensure images scale down and don't force large breaks */
+    /* Each education item on its own page */
+    .education-item {
+        page-break-after: always;
+        break-after: page;
+        break-inside: avoid;
+    }
+
+    /* Skills and dashboard each get a page */
+    #skills, #redirectdashboard, #dashboard-links-container {
+        page-break-after: always;
+        break-after: page;
+    }
+
+    /* Each featured project on its own page */
+    .user-projects {
+        page-break-after: always;
+        break-after: page;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    /* Certificates: one certificate per page */
+    .certificate-item {
+        page-break-after: always;
+        break-after: page;
+        break-inside: avoid;
+    }
+
+    /* Make images scale to printable width and avoid splitting them */
     img {
-        max-width: 100% !important;
+        max-width: 95% !important;
         height: auto !important;
         page-break-inside: avoid;
     }
 
-    /* Force a page break before large sections if needed */
-    #certificates, #projects, #redirecteducation, #redirectworkexperience {
-        page-break-before: always;
-        break-before: always;
-    }
-
-    /* Use normal link styling but show URLs for accessibility if desired */
+    /* Use normal link styling but optionally show URLs in parentheses */
     a:after {
         content: " (" attr(href) ")";
         font-size: 90%;
+    }
+
+    /* Ensure body prints cleanly */
+    body {
+        background: #fff !important;
+        color: #000 !important;
     }
 }
 
@@ -907,12 +941,7 @@ a img {
     background-color: #0056b3;
   }
 
-@media print {
-  section {
-    page-break-after: always;
-    break-after: page;
-  }
-}
+/* previously there was a generic section page-break rule; we now control breaks per-element above */
 
   
   
