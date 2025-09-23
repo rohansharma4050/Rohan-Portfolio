@@ -906,5 +906,13 @@ a img {
   #dashboard-links-container .project-link:hover {
     background-color: #0056b3;
   }
+
+@media print {
+  section {
+    page-break-after: always;
+    break-after: page;
+  }
+}
+
   
   
